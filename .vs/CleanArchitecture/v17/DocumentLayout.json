@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|solutionrelative:api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\application\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{090AC79E-60BC-4563-9DB3-343375B920F8}|Contracts\\Contracts.csproj|c:\\users\\geekster pc\\desktop\\programming\\lms\\contracts\\service\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{090AC79E-60BC-4563-9DB3-343375B920F8}|Contracts\\Contracts.csproj|solutionrelative:contracts\\service\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Service\\IAuthorizationService.cs",
+              "RelativeDocumentMoniker": "Contracts\\Service\\IAuthorizationService.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Service\\IAuthorizationService.cs",
+              "RelativeToolTip": "Contracts\\Service\\IAuthorizationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T21:01:08.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\AuthorizationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\AuthorizationService.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\AuthorizationService.cs",
+              "RelativeToolTip": "Application\\Services\\AuthorizationService.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwGwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T20:53:51.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Services\\EmailService.cs",
+              "RelativeToolTip": "Application\\Services\\EmailService.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T20:35:28.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "API\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAIwDIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T20:19:39.003Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
