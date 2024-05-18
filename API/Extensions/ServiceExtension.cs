@@ -1,6 +1,8 @@
 ﻿using Application;
+using Application.Mapping;
 using Contracts;
 using Domain.Models;
+using Infrastructure;
 using Infrastructure.Auth;
 using Infrastructure.DataConnection;
 using Infrastructure.Email;
@@ -9,21 +11,27 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using System.Text;
 
 namespace API.Extensions
 {
     public static class ServiceExtension
     {
-        public static IServiceCollection ConfigureSqlServer(this IServiceCollection services, IConfiguration configuration)
-        {
+        public static IServiceCollection ConfigureSqlServer(this IServiceCollection services, IConfiguration configuration)=>
             services.AddDbContext<DomainDataContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), options =>
                 {
                     options.MigrationsAssembly("API");
                 }));
-            return services;
-        }
+
+
+        public static IServiceCollection ConfigureMongoDb(this IServiceCollection services, IConfiguration configuration) =>
+            services.AddScoped<MongoDbContext>(sp =>
+            {
+                var client = new MongoClient(configuration.GetConnectionString("MongoDbConnection"));
+                return new MongoDbContext(client, configuration["MongoDb:DatabaseName"]); ;
+            });
         public static IServiceCollection AddIdentityService(this IServiceCollection services, IConfiguration config)
         {
 
@@ -63,9 +71,12 @@ namespace API.Extensions
         }
 
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
-    services.AddScoped<IRepositoryManager, RepositoryManager>();
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
 
         public static void ConfigureServiceManager(this IServiceCollection service) =>
             service.AddScoped<IServiceManager, ServiceManager>();
+
+        public static void ConfigureAutomapper(this IServiceCollection services) => 
+            services.AddAutoMapper(typeof(MappingProfile).Assembly);
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj": {}
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj": {
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Geekster PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\API\\obj\\",
+        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,17 +33,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Application.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Application\\Application.csproj"
               },
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -111,14 +111,14 @@
         }
       }
     },
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Application.csproj": {
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Geekster PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Application\\obj\\",
+        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -140,11 +140,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj"
               }
             }
           }
@@ -164,6 +164,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -197,14 +201,14 @@
         }
       }
     },
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\Geekster PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -226,8 +230,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj"
               }
             }
           }
@@ -272,14 +276,14 @@
         }
       }
     },
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj": {
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Geekster PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -321,6 +325,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.25.0, )"
             }
           },
           "imports": [
@@ -343,14 +351,14 @@
         }
       }
     },
-    "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Geekster PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -372,11 +380,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj"
+              "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj"
               }
             }
           }
@@ -403,6 +411,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.25.0, )"
             }
           },
           "imports": [

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qZKaH1O1nwq6URxLmTg3xyq2VJHn4eUR4DSfkWiP4YPSK40DhTCOF7r/AYu20oa0sg0m08zts9j8qLGyVPK9LQ==",
+  "dgSpecHash": "F4Tw3JmEPpUh5aX9j02JY1XsluOlSG+jHsRQHEwNwmdI3rcmwhaDwq43ZEkjro1dDQ9Ly9/1RljCmkWqDgERMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\Lms\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.4\\microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.4\\microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",
@@ -21,7 +21,10 @@
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
-    "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\mongodb.bson\\2.25.0\\mongodb.bson.2.25.0.nupkg.sha512",
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Geekster PC\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
