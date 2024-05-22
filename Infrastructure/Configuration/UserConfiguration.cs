@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -12,7 +13,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasKey(e => e.Id);
         builder.Ignore(e => e.TwoFactorEnabled);
 
-
+        builder.HasOne(u => u.ExamResults)
+            .WithOne()
+            .HasForeignKey<ExamResults>(e => e.Id)
+            .IsRequired(false);
 
         builder.HasMany(UserRole => UserRole.Roles)
             .WithOne(user => user.User)

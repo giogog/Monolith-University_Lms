@@ -9,12 +9,14 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
-        builder.ToTable("AspNetRoles");
+        builder.ToTable("Roles");
         builder.HasData(
             new List<Role>
             {
                 new Role { Id = -1, Name = "Admin", NormalizedName = "ADMIN" },
-                new Role { Id = -2, Name = "User", NormalizedName = "USER" },
+                new Role { Id = -2, Name = "Applicant", NormalizedName = "APPLICANT" },
+                new Role { Id = -3, Name = "Student", NormalizedName = "STUDENT" },
+                new Role { Id = -4, Name = "Teacher", NormalizedName = "TEACHER" },
             }
         );
 

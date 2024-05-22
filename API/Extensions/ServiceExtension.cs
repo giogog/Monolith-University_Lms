@@ -1,5 +1,5 @@
-﻿using Application;
-using Application.Mapping;
+﻿using Domain;
+using Domain.Mapping;
 using Contracts;
 using Domain.Models;
 using Infrastructure;
@@ -78,5 +78,17 @@ namespace API.Extensions
 
         public static void ConfigureAutomapper(this IServiceCollection services) => 
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
+
+        public static void ConfigureMediatR(this IServiceCollection services) =>
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
+
+        public static void ConfigureCors(this IServiceCollection services) =>
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("https://localhost:5003")
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader());
+            });
     }
 }

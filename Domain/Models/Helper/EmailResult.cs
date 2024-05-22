@@ -1,6 +1,8 @@
-﻿namespace Domain.Models;
+﻿using Microsoft.AspNetCore.Identity;
 
-public class EmailResult
+namespace Domain.Models;
+
+public class EmailResult:IdentityResult
 {
     public bool IsSuccess { get; set; }
     public string ErrorMessage { get; set; }

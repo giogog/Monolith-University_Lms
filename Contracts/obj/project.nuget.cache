@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8nCyNuH2Y9/TlvgeO0BI5ex6kEmD1wufMJELmgTVAvEk0NL/jmyVq7z9XeQU89MgIy1Ew0utpHqbjzBSoVBBnw==",
+  "dgSpecHash": "r2THWXHbijU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\CleanArchitecture\\Contracts\\Contracts.csproj",
+  "projectFilePath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.4\\microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "C:\\Users\\Geekster PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.4\\microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",

@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Domain.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
@@ -14,7 +15,7 @@ public class EmailSender : IEmailSender
         _emailSettings = emailSettings.Value;
 
     }
-    public async Task<EmailResult> SendEmailAsync(string email, string subject, string htmlMessage)
+    public async Task<IdentityResult> SendEmailAsync(string email, string subject, string htmlMessage)
     {
         try
         {
@@ -36,11 +37,11 @@ public class EmailSender : IEmailSender
 
             await client.SendMailAsync(mailMessage);
 
-            return new EmailResult { IsSuccess = true };
+            return IdentityResult.Success;
         }
         catch (Exception ex)
         {
-            return new EmailResult { IsSuccess = false, ErrorMessage = ex.Message };
+            return IdentityResult.Failed(new IdentityError { Description = ex.Message });
         }
     }
 }

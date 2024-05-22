@@ -1,9 +1,17 @@
-﻿namespace Domain.Dtos;
+﻿using Domain.Enums;
+using Domain.Models;
 
-public record LoginDto(string Username,string Password);
+namespace Domain.Dtos;
+
+
+//Third Party 
+public record ExamResultsDto(string Subject, int Grade);
+public record ExamsCardDto(double Grant, IEnumerable<ExamResultsDto> Results);
+
+//User
+public record LoginDto(string Username, string Password);
 public record LoginResponseDto(string Username, string Token);
+public record RegisterDto(string PersonalID, string Name, string Surname, string Email, string Password, string Faculty, AcademicRole Role,ExamResults? ExamResults);
 
-//public record RegisterDto(string Name, string Surname, string Username, string Email, string Password);
-
-public record RegisterDto(string Username, string Email, string Password);
-public record AssignRoleDto(string Username, string[] Roles);
+//Applicants
+public record ApplicantDto(string Name, string Surname, string PersonalId, string Faculty, ExamsCardDto examCard);

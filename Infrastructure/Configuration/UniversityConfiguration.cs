@@ -12,11 +12,6 @@ public class UniversityConfiguration : IEntityTypeConfiguration<University>
 
         builder.HasKey(x => x.Id);
 
-        builder.HasMany(u => u.Faculties)
-            .WithOne(u => u.University)
-            .HasForeignKey(f => f.UniversityId)
-            .IsRequired();
-
 
         builder.HasData(
             new List<University>

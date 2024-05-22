@@ -1,62 +1,46 @@
-﻿using Contracts;
+﻿using Application.CQRS.Commands;
+using Contracts;
 using Domain.Dtos;
-using Microsoft.AspNetCore.Http;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
-[Route("api/[controller]")]
-[ApiController]
-public class AccountController : ControllerBase
+public class AccountController(IServiceManager _serviceManager,IMediator mediator) : ApiController(_serviceManager,mediator)
 {
-    private readonly IServiceManager _serviceManager;
 
-
-    public AccountController(IServiceManager serviceManager) => _serviceManager = serviceManager;
-
-    [HttpPost("register")]
-    public async Task<ActionResult> Register(RegisterDto registerDto)
+    [HttpPost("student-application")]
+    public async Task<ActionResult> Register(StudentApplicationCommand studentApplicationCommand)
     {
-        var registrationCheckUp = await _serviceManager.AuthorizationService.Register(registerDto);
+        var registrationCheckUp = await mediator.Send(studentApplicationCommand);
 
         if (!registrationCheckUp.Succeeded)
             return BadRequest(registrationCheckUp.Errors);
+        var sendmail =  await _serviceManager.EmailService.SendConfirmationMail(Url, studentApplicationCommand.PersonalID);
 
-        var emailSent = await _serviceManager.EmailService.SendConfirmationMail(Url, registerDto.Username);
-
-        if (!emailSent.IsSuccess)
-            return BadRequest(emailSent.ErrorMessage);
+        if (!sendmail.Succeeded)
+            return BadRequest(sendmail.Errors);
 
         return Ok("Registration successful. Please check your email to confirm your account.");
     }
 
     [HttpPost("resend-confirmation")]
-    public async Task<ActionResult> ResendConfirmation(string Username)
+    public async Task<ActionResult> ResendConfirmation(string PersonalId)
     {
-        var alreadyConfirmed = await _serviceManager.AuthorizationService.CheckMailConfirmation(Username);
+        var alreadyConfirmed = await _serviceManager.AuthorizationService.CheckMailConfirmation(PersonalId);
 
         if(alreadyConfirmed.IsSuccess)
             return BadRequest(alreadyConfirmed.ErrorMessage);
 
 
-        var emailSent = await _serviceManager.EmailService.SendConfirmationMail(Url, Username);
+        var emailSent = await _serviceManager.EmailService.SendConfirmationMail(Url, PersonalId);
 
-        if (!emailSent.IsSuccess)
-            return BadRequest(emailSent.ErrorMessage);
+        if (!emailSent.Succeeded)
+            return BadRequest(emailSent.Errors);
 
-        return Ok("Registration successful. Please check your email to confirm your account.");
+        return Ok("Please check your email to confirm your account.");
     }
 
-    [HttpPost("assign-role")]
-    public async Task<ActionResult> AssignRole([FromBody] AssignRoleDto assignRoleDto)
-    {
-
-        var result = await _serviceManager.AuthorizationService.AssignRole(null, assignRoleDto.Roles, assignRoleDto.Username);
-        if (!result.Succeeded)
-            return BadRequest(result.Errors);
-        return Ok($"Role Robot Assigned Successfully to User: {assignRoleDto.Username}");
-
-    }
 
     [HttpPost("login")]
     public async Task<ActionResult<LoginResponseDto>> Login(LoginDto loginDto)
@@ -71,16 +55,16 @@ public class AccountController : ControllerBase
     }
 
     [HttpGet("confirm-email")]
-    public async Task<ActionResult<LoginResponseDto>> ConfirmEmail(int userId, string token)
+    public async Task<ActionResult<LoginResponseDto>> ConfirmEmail(string personalId, string token)
     {
-        var result = await _serviceManager.EmailService.ConfirmEmailAsync(userId.ToString(), token);
+        var result = await _serviceManager.EmailService.ConfirmEmailAsync(personalId, token);
 
         if (!result.Succeeded)
         {
             return BadRequest("Error confirming email.");
         }
 
-        return Ok(await _serviceManager.AuthorizationService.Authenticate(user => user.Id == userId));
+        return Ok(await _serviceManager.AuthorizationService.Authenticate(user => user.UserName == personalId));
 
     }
 
