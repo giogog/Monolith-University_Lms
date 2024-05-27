@@ -9,18 +9,17 @@ namespace Application.Services;
 public class AuthorizationService : IAuthorizationService
 {
 
-    private readonly RoleManager<Role> _roleManager;
+    //private readonly RoleManager<Role> _roleManager;
     private readonly ITokenGenerator _tokenGenerator;
     private readonly IRepositoryManager _repositoryManager;
 
 
 
-    public AuthorizationService(RoleManager<Role> roleManager,
+    public AuthorizationService(
         ITokenGenerator tokenGenerator,
         IRepositoryManager repositoryManager)
     {
 
-        _roleManager = roleManager;
         _tokenGenerator = tokenGenerator;
         _repositoryManager = repositoryManager;
     }
@@ -36,6 +35,10 @@ public class AuthorizationService : IAuthorizationService
 
     public async Task<IdentityResult> Register(RegisterDto registerDto)
     {
+        var isDigit = registerDto.PersonalID.All(char.IsDigit);
+        if (registerDto.PersonalID.Length != 11 && !isDigit)
+            return IdentityResult.Failed(new IdentityError { Code = "WrongPersonalId", Description = "There is mistake in Personal Id" });
+
         var user = new User
         {
             UserName = registerDto.PersonalID,
@@ -51,15 +54,15 @@ public class AuthorizationService : IAuthorizationService
 
         if (!result.Succeeded)
             return result;
-
-        return await AssignRole(user, [registerDto.Role.ToString()]);
+        
+        return await _repositoryManager.UserRepository.AddToRole(user, registerDto.Role.ToString());
 
     }
 
     public async Task<IdentityResult> Login(LoginDto loginDto)
     {
 
-        var user = await _repositoryManager.UserRepository.GetUser(user => user.UserName == loginDto.Username);
+        var user = await _repositoryManager.UserRepository.GetUser(user => user.UserName == loginDto.PersonalId);
 
         if (user == null)
             return IdentityResult.Failed(new IdentityError { Code = "UserDoesNotExist", Description = "The user does not exists." });
@@ -74,35 +77,6 @@ public class AuthorizationService : IAuthorizationService
 
     }
 
-    public async Task<IdentityResult> AssignRole(User? user, string[] roles, string? username = "Default")
-    {
-        if (user == null)
-        {
-            user = await _repositoryManager.UserRepository.GetUser(u => u.UserName == username);
-        }
-        
-        foreach (var role in roles)
-        {
-            var roleExists = await _roleManager.RoleExistsAsync(role);
-
-            if (!roleExists && username == "Default")
-            {
-                return IdentityResult.Failed(new IdentityError { Code = "RoleNotFound", Description = "Role doesn't exist." });
-            }
-
-        }
-
-
-        try
-        {
-
-            return await _repositoryManager.UserRepository.AddToRoles(user, roles);
-        }
-        catch (Exception ex)
-        {
-            return IdentityResult.Failed(new IdentityError { Code = "Exception", Description = ex.Message });
-        }
-    }
 
     public async Task<EmailResult> CheckMailConfirmation(string Username)
     {

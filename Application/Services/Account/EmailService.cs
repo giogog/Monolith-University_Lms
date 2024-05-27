@@ -23,7 +23,7 @@ public class EmailService : IEmailService
         _tokenGenerator = tokenGenerator;
     }
     public async Task<IdentityResult> SendConfirmationMail(IUrlHelper urlHelper, string username)
-    {
+    { 
         // Retrieve the user from the repository
         var user = await _repoManager.UserRepository.GetUser(user => user.UserName == username);
         if (user == null)
@@ -67,9 +67,9 @@ public class EmailService : IEmailService
 
 
     // Method to confirm the user's email
-    public async Task<IdentityResult> ConfirmEmailAsync(string personalId, string token)
+    public async Task<IdentityResult> ConfirmEmailAsync(string userId, string token)
     {
-        var user = await _repoManager.UserRepository.GetUser(u=>u.UserName == personalId);
+        var user = await _userManager.FindByIdAsync(userId);
         if (user == null)
         {
             return IdentityResult.Failed(new IdentityError { Code = "UserNotFound", Description = "User not found." });

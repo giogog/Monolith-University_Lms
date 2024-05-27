@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace API.Controllers
 {
@@ -31,5 +32,6 @@ namespace API.Controllers
            // _mediator = mediator;
             //_serviceManager = serviceManager;
         }
+
     }
 }

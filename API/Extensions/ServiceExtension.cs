@@ -1,5 +1,5 @@
 ﻿using Domain;
-using Domain.Mapping;
+using Application.Mapping;
 using Contracts;
 using Domain.Models;
 using Infrastructure;
@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using System.Text;
+using Application.Services;
+using Application.CQRS.Commands;
 
 namespace API.Extensions
 {
@@ -62,6 +64,24 @@ namespace API.Extensions
                         ValidateIssuer = false,
                         ValidateAudience = false
                     };
+
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var accessToken = context.Request.Query["access_token"];
+
+                            // If the request is for our SignalR hub
+                            var path = context.HttpContext.Request.Path;
+                            if (!string.IsNullOrEmpty(accessToken) &&
+                                (path.StartsWithSegments("/applicantHub")))
+                            {
+                                // Read the token out of the query string
+                                context.Token = accessToken;
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
             services.Configure<EmailSettings>(config.GetSection("EmailSettings"));
             services.AddTransient<ITokenGenerator, TokenGenerator>();
@@ -80,7 +100,7 @@ namespace API.Extensions
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
         public static void ConfigureMediatR(this IServiceCollection services) =>
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(StudentApplicationCommand).Assembly));
 
         public static void ConfigureCors(this IServiceCollection services) =>
             services.AddCors(options =>
@@ -88,7 +108,8 @@ namespace API.Extensions
                 options.AddPolicy("AllowSpecificOrigin",
                     builder => builder.WithOrigins("https://localhost:5003")
                                       .AllowAnyMethod()
-                                      .AllowAnyHeader());
+                                      .AllowAnyHeader()
+                                      .AllowCredentials());
             });
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
 
-    public class ThirdpartController(IServiceManager serviceManager) : ApiController(serviceManager)
+    public class ThirdpartyController(IServiceManager serviceManager) : ApiController(serviceManager)
     {
         [HttpGet("{personalId}")]
         public async Task<ActionResult<ExamsCardDto>> GetResults(string personalId)

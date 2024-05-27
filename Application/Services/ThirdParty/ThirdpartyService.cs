@@ -10,6 +10,7 @@ public class ThirdpartyService : IThirdpartyService
     {
         string[] mandatorySubjects = new string[] { "Middle Earth Language", "Elven", "Magic" };
         string[] subjectsToChoose = new string[] { "Math", "History" };
+        double[] grants = new double[] { 0.5, 0.75, 1 };
         Random random = new Random();
         var results = new List<ExamResultsDto>
         {
@@ -18,7 +19,7 @@ public class ThirdpartyService : IThirdpartyService
             new ExamResultsDto(mandatorySubjects[2],random.Next(30, 101)),
             new ExamResultsDto(subjectsToChoose[random.Next(0, 2)],random.Next(30, 101))
         };
-        return new ExamsCardDto(0.5,results);
+        return new ExamsCardDto(grants[random.Next(0, 3)], results);
     }
 
 }

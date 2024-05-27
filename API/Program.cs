@@ -1,4 +1,5 @@
 using API.Extensions;
+using Application.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.ConfigureCors();
+builder.Services.AddSignalR();
 builder.Services.ConfigureSqlServer(builder.Configuration);
 builder.Services.ConfigureMongoDb(builder.Configuration);
 builder.Services.ConfigureAutomapper();
@@ -16,7 +19,7 @@ builder.Services.ConfigureServiceManager();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureMediatR();
-builder.Services.ConfigureCors();
+
 
 var app = builder.Build();
 
@@ -26,10 +29,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("AllowSpecificOrigin");
+
 app.UseHttpsRedirection();
 
+app.UseRouting();
+app.UseCors("AllowSpecificOrigin");
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ApplicantHub>("/applicantHub").RequireAuthorization();
+   
+});
 
 app.MapControllers();
 

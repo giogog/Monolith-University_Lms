@@ -2,15 +2,16 @@
 
 namespace Domain.Models;
 
-public class Result<T>
+public record Result<T>
 {
     public string Message { get; private set; }
+    public string Code {  get; private set; }
     public bool IsSuccess { get; private set; }
     public T? Data { get; private set; }
 
-    public static Result<T> Failed(string massage)
+    public static Result<T> Failed(string code,string massage)
     {
-        return new Result<T> { Message = massage, IsSuccess = false };
+        return new Result<T> { Code = code,Message = massage, IsSuccess = false };
     }
     public static Result<T> Success(T? data, string massage = "") =>
         new Result<T> { Data = data, Message = massage, IsSuccess = true };

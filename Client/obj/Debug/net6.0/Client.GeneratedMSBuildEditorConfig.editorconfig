@@ -22,12 +22,36 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Application.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb24ucmF6b3I=
+[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Administrator/AdministratorDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5pc3RyYXRvclxBZG1pbmlzdHJhdG9yRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Applicant/Applicant.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYW50XEFwcGxpY2FudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Authorization/Application.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yaXphdGlvblxBcHBsaWNhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Authorization/Confirmation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yaXphdGlvblxDb25maXJtYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Authorization/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yaXphdGlvblxMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Student/StudentDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxTdHVkZW50RGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Pages/Teacher/TeacherDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVhY2hlclxUZWFjaGVyRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Geekster PC/Desktop/Programming/GondorUni/Client/Shared/SurveyPrompt.razor]

@@ -7,5 +7,6 @@ public interface IServiceManager
     IExamsService ExamsService { get; }
     IThirdpartyService ThirdpartyService { get; }
     IUniversityService UniversityService { get; }
+    IApplicantService ApplicantService { get; }
 
 }

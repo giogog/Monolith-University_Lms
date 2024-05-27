@@ -18,7 +18,7 @@ public class FacultyRepository(DomainDataContext context) : BaseRepository<Facul
 
     public IQueryable<Faculty> GetByCondition(Expression<Func<Faculty, bool>> expression) => FindByCondition(expression);
 
-    public async Task<Faculty> GetFacultyByIdAsync(string name) => 
+    public async Task<Faculty> GetFacultyByNameAsync(string name) => 
         await FindByCondition(f => f.Name.ToLower() == name.ToLower())
         .FirstOrDefaultAsync();
     

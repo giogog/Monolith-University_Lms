@@ -7,8 +7,10 @@ namespace Contracts;
 public interface IUserRepository
 {
     Task<IdentityResult> CreateUser(User user, string passord);
+    Task<IdentityResult> DeleteUser(User user);
     Task<User> GetUser(Expression<Func<User, bool>> expression);
     Task<IEnumerable<User>> GetAllUsers();
-    Task<IdentityResult> AddToRoles(User user, string[] roles);
+    Task<IdentityResult> AddToRole(User user, string roles);
     Task<bool> CheckPassword(User user,string password);
+    Task<User> GetApplicantWithExamResultsAsync(Expression<Func<User, bool>> expression);
 }

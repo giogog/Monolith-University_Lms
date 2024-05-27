@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n+ESpJoneMcFxIaMMfLig0ci3cekO4VI1XGVcdBg9Rg=",
+  "Hash": "/erAgB6xcLdxgKeBnQEJz1DGuteqfPJWeRl+/wSM7Ec=",
   "Source": "Client",
   "BasePath": "_content/Client",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Geekster PC\\.nuget\\packages\\quick.aspnetcore.components.web.extensions\\6.0.2\\staticwebassets\\headManager.js",
+      "SourceId": "Quick.AspNetCore.Components.Web.Extensions",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Geekster PC\\.nuget\\packages\\quick.aspnetcore.components.web.extensions\\6.0.2\\staticwebassets\\",
+      "BasePath": "_content/Quick.AspNetCore.Components.Web.Extensions",
+      "RelativePath": "headManager.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Geekster PC\\.nuget\\packages\\quick.aspnetcore.components.web.extensions\\6.0.2\\staticwebassets\\headManager.js"
+    },
     {
       "Identity": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Client.styles.css",
       "SourceId": "Client",

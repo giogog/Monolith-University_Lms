@@ -11,5 +11,6 @@ public interface IUserRoleRepository
 {
     Task<User> GetUserByRoleAsync(int roleId);
     Task<IEnumerable<User>> GetUsersByRoleAsync(int roleId);
+    Task<IEnumerable<User>> GetApplicantsAsync(int applicantroleId);
     Task DeleteRoleToUserAsync(int userId, int roleId);
 }

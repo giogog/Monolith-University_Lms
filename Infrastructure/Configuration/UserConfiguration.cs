@@ -16,11 +16,14 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasOne(u => u.ExamResults)
             .WithOne()
             .HasForeignKey<ExamResults>(e => e.Id)
-            .IsRequired(false);
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Cascade); ;
+
 
         builder.HasMany(UserRole => UserRole.Roles)
             .WithOne(user => user.User)
             .HasForeignKey(user => user.UserId)
             .IsRequired();
+
     }
 }

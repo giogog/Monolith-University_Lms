@@ -1,0 +1,21 @@
+﻿@page "/applicant"
+@inject ITokenService TokenService
+
+<div class="header">
+    <div>
+        @if (!string.IsNullOrEmpty(username))
+        {
+            <span>Welcome, @username!</span>
+        }
+    </div>
+</div>
+
+@code {
+    private string username;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var (_, user) = await TokenService.GetTokenAndUsernameAsync();
+        username = user;
+    }
+}

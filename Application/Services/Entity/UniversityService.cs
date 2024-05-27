@@ -16,7 +16,7 @@ public class UniversityService : IUniversityService
         var faculties = await _repositoryManager.FacultyRepository.GetAllFacultiesAsync();
 
         if (faculties.Count() == null)
-            return Result<IEnumerable<string>>.Failed("There are no Faculties");
+            return Result<IEnumerable<string>>.Failed("NotFound", "There are no Faculties");
 
         List<string> facultyNames = new List<string>();
 

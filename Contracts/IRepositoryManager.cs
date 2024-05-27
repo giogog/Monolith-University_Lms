@@ -1,4 +1,6 @@
-﻿namespace Contracts;
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Contracts;
 
 public interface IRepositoryManager
 {
@@ -6,5 +8,7 @@ public interface IRepositoryManager
     IUniversityRepository UniversityRepository { get; }
     IFacultyRepository FacultyRepository { get; }
     IUserRoleRepository UserRoleRepository { get; }
-    Task SaveAsync();
+    IRoleRepository RoleRepository { get; }
+    IStudentRepository StudentRepository { get; }
+    Task<int> SaveAsync();
 }

@@ -149,6 +149,14 @@ C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\refint\API.dll
 C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\API.pdb
 C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\Geekster PC\Desktop\Programming\Lms\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.AssemblyInfo.cs
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.sourcelink.json
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\appsettings.json
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\API.exe
@@ -201,6 +209,7 @@ C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\MongoDB.
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\MongoDB.Driver.Core.dll
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\MongoDB.Libmongocrypt.dll
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\SharpCompress.dll
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Snappier.dll
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -296,14 +305,6 @@ C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Applicat
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Contracts.pdb
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Domain.pdb
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Infrastructure.pdb
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.AssemblyInfo.cs
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.sourcelink.json
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -318,4 +319,4 @@ C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\refint\A
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.pdb
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\obj\Debug\net8.0\ref\API.dll
-C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Geekster PC\Desktop\Programming\GondorUni\API\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

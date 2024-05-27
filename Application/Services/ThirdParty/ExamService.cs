@@ -15,13 +15,19 @@ public class ExamService:IExamsService
     }
     public async Task<ExamsCardDto> GetResultsFromThirdParty(string personalId)
     {
-        var response = await _httpClient.GetAsync($"api/thirdpart/{personalId}");
+        var response = await _httpClient.GetAsync($"https://localhost:5001/api/Thirdparty/{personalId}");
         response.EnsureSuccessStatusCode();
 
         var jsonString = await response.Content.ReadAsStringAsync();
-        var data = JsonSerializer.Deserialize<ExamsCardDto>(jsonString);
+        var options = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            PropertyNameCaseInsensitive = true,
+        };
+        var data = JsonSerializer.Deserialize<ExamsCardDto>(jsonString, options);
 
         return data;
     }
+
 
 }

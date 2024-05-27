@@ -25,10 +25,7 @@ namespace API.Migrations
             modelBuilder.Entity("Domain.Models.ExamResults", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<double>("Grant")
                         .HasColumnType("float");
@@ -43,13 +40,7 @@ namespace API.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("SubjectNames");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("ExamResults", (string)null);
                 });
@@ -128,6 +119,42 @@ namespace API.Migrations
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         });
+                });
+
+            modelBuilder.Entity("Domain.Models.Student", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Balance")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<int>("CurrentSemester")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FacultyId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Grant")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal?>("SemesterPay")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<int>("TotalCredits")
+                        .HasColumnType("int");
+
+                    b.Property<int>("YearlyAvailableCredits")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FacultyId");
+
+                    b.ToTable("Student", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.University", b =>
@@ -354,7 +381,26 @@ namespace API.Migrations
                 {
                     b.HasOne("Domain.Models.User", null)
                         .WithOne("ExamResults")
-                        .HasForeignKey("Domain.Models.ExamResults", "UserId");
+                        .HasForeignKey("Domain.Models.ExamResults", "Id");
+                });
+
+            modelBuilder.Entity("Domain.Models.Student", b =>
+                {
+                    b.HasOne("Domain.Models.Faculty", "Faculty")
+                        .WithMany("Students")
+                        .HasForeignKey("FacultyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.User", "User")
+                        .WithOne()
+                        .HasForeignKey("Domain.Models.Student", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Faculty");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Models.UserRole", b =>
@@ -410,6 +456,11 @@ namespace API.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Models.Faculty", b =>
+                {
+                    b.Navigation("Students");
                 });
 
             modelBuilder.Entity("Domain.Models.Role", b =>

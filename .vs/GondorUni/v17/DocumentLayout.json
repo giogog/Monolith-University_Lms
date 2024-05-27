@@ -3,52 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\servicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\servicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62861D28-D8E8-4EA6-A59A-77FA2A6D0D45}|Client\\Client.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\client\\pages\\administrator\\administratordashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62861D28-D8E8-4EA6-A59A-77FA2A6D0D45}|Client\\Client.csproj|solutionrelative:client\\pages\\administrator\\administratordashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\cqrs\\handlers\\getapplicantshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\getapplicantshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|solutionrelative:api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\mapper\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\cqrs\\handlers\\studentapplicationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\cqrs\\handlers\\studentapplicationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\services\\account\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\account\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\cqrs\\commands\\usercommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\cqrs\\commands\\usercommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\services\\thirdparty\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\thirdparty\\examservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\services\\thirdparty\\thirdpartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\thirdparty\\thirdpartyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\services\\account\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\account\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\application\\services\\entity\\universityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3F024F4-0D7A-4466-8F3C-4B9FCB716823}|Application\\Application.csproj|solutionrelative:application\\services\\entity\\universityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86EEE25A-A4CF-4087-BAF5-B422B5309B8F}|Domain\\Domain.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\domain\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86EEE25A-A4CF-4087-BAF5-B422B5309B8F}|Domain\\Domain.csproj|solutionrelative:domain\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62861D28-D8E8-4EA6-A59A-77FA2A6D0D45}|Client\\Client.csproj|c:\\users\\geekster pc\\desktop\\programming\\gondoruni\\client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62861D28-D8E8-4EA6-A59A-77FA2A6D0D45}|Client\\Client.csproj|solutionrelative:client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,156 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\API\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\API\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "API\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:27:05.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserCommands.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\CQRS\\Commands\\UserCommands.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Commands\\UserCommands.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\CQRS\\Commands\\UserCommands.cs",
-              "RelativeToolTip": "Application\\CQRS\\Commands\\UserCommands.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:26:32.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Mapper\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Application\\Mapper\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Mapper\\MappingProfile.cs",
-              "RelativeToolTip": "Application\\Mapper\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:26:05.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExamService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\ThirdParty\\ExamService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\ThirdParty\\ExamService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\ThirdParty\\ExamService.cs",
-              "RelativeToolTip": "Application\\Services\\ThirdParty\\ExamService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:25:43.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ThirdpartyService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\ThirdParty\\ThirdpartyService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\ThirdParty\\ThirdpartyService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\ThirdParty\\ThirdpartyService.cs",
-              "RelativeToolTip": "Application\\Services\\ThirdParty\\ThirdpartyService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:25:35.382Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UniversityService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\Entity\\UniversityService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\Entity\\UniversityService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\Entity\\UniversityService.cs",
-              "RelativeToolTip": "Application\\Services\\Entity\\UniversityService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:25:04.749Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServiceManager.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\ServiceManager.cs",
-              "RelativeDocumentMoniker": "Application\\ServiceManager.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\ServiceManager.cs",
-              "RelativeToolTip": "Application\\ServiceManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:24:25.399Z",
+              "Title": "AdministratorDashboard.razor",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Client\\Pages\\Administrator\\AdministratorDashboard.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Administrator\\AdministratorDashboard.razor",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Client\\Pages\\Administrator\\AdministratorDashboard.razor",
+              "RelativeToolTip": "Client\\Pages\\Administrator\\AdministratorDashboard.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-27T21:59:25.49Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\Account\\EmailService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\Account\\EmailService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\Account\\EmailService.cs",
-              "RelativeToolTip": "Application\\Services\\Account\\EmailService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:24:04.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthorizationService.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\Account\\AuthorizationService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\Account\\AuthorizationService.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\Services\\Account\\AuthorizationService.cs",
-              "RelativeToolTip": "Application\\Services\\Account\\AuthorizationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:04:23.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Dtos.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Domain\\Dtos\\Dtos.cs",
-              "RelativeDocumentMoniker": "Domain\\Dtos\\Dtos.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Domain\\Dtos\\Dtos.cs",
-              "RelativeToolTip": "Domain\\Dtos\\Dtos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:03:33.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetApplicantsHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\CQRS\\Handlers\\GetApplicantsHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\GetApplicantsHandler.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\CQRS\\Handlers\\GetApplicantsHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Handlers\\GetApplicantsHandler.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAIAwwBMAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:03:21.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentApplicationHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\CQRS\\Handlers\\StudentApplicationHandler.cs",
-              "RelativeDocumentMoniker": "Application\\CQRS\\Handlers\\StudentApplicationHandler.cs",
-              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Application\\CQRS\\Handlers\\StudentApplicationHandler.cs",
-              "RelativeToolTip": "Application\\CQRS\\Handlers\\StudentApplicationHandler.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwAAAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:00:27.213Z"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Client\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Client\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Geekster PC\\Desktop\\Programming\\GondorUni\\Client\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "Client\\Shared\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-27T22:08:59.849Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -9,6 +9,6 @@ public interface IFacultyRepository
     Task UpdateFacultyAsync(Faculty faculty);
     Task DeleteFacultyAsync(Faculty faculty);
     IQueryable<Faculty> GetByCondition(Expression<Func<Faculty, bool>> expression);
-    Task<Faculty> GetFacultyByIdAsync(string name);
+    Task<Faculty> GetFacultyByNameAsync(string name);
     Task<IEnumerable<Faculty>> GetAllFacultiesAsync();
 }

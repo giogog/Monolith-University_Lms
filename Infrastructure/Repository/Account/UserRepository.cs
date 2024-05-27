@@ -15,9 +15,16 @@ public class UserRepository:IUserRepository
         _userManager = userManager;
     }
 
-    public async Task<IdentityResult> AddToRoles(User user, string[] roles)
+    public async Task<IdentityResult> AddToRole(User user, string role)
     {
-        return await _userManager.AddToRolesAsync(user, roles);
+        
+        return await _userManager.AddToRoleAsync(user, role);
+    }
+
+    public async Task<IdentityResult> DeleteUser(User user)
+    {
+
+        return await _userManager.DeleteAsync(user);
     }
 
     public async Task<bool> CheckPassword(User user, string password)
@@ -29,6 +36,11 @@ public class UserRepository:IUserRepository
     {
         return await _userManager.CreateAsync(user, passord);
     }
+
+    public async Task<User> GetApplicantWithExamResultsAsync(Expression<Func<User, bool>> expression) =>
+            await _userManager.Users.Where(expression)
+            .Include(r => r.ExamResults) // Include ExamResults here
+            .FirstOrDefaultAsync();
 
     public async Task<IEnumerable<User>> GetAllUsers()
     {
