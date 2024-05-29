@@ -15,3 +15,11 @@ public record RegisterDto(string PersonalID, string Name, string Surname, string
 
 //Applicants
 public record ApplicantDto(string Name, string Surname, string PersonalId, string Faculty, ExamsCardDto examCard);
+
+//Subjects
+public record SubjectDto(string Name, int Credits, Semester Semester, string[] gradeTypes,string FacultyName);
+public record LectureDto(int LectureCapacity, string TeacherPersonalId, DayOfWeek DayOfWeek, TimeSpan StartTime, TimeSpan EndTime);
+public record SeminarDto(int SeminarCapacity, string TeacherPersonalId, DayOfWeek DayOfWeek, TimeSpan StartTime, TimeSpan EndTime);
+
+public record SubjectDtoGet(int id, string Name, int Credits, Semester Semester, string[] gradeTypes);
+

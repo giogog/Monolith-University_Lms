@@ -19,6 +19,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "front", "front", "{1F437C13
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "back", "back", "{E1C70B3F-DA71-4D81-B1BE-0BF700025322}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06647C8E-1302-4969-817B-952C475B7579}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\Repository\Entity\EnrollmentRepository.cs = Infrastructure\Repository\Entity\EnrollmentRepository.cs
+		Contracts\Repository\Entity\IEnrollmentRepository.cs = Contracts\Repository\Entity\IEnrollmentRepository.cs
+		Contracts\Repository\Entity\ILectureRepository.cs = Contracts\Repository\Entity\ILectureRepository.cs
+		Contracts\Repository\Entity\ISeminarRepository.cs = Contracts\Repository\Entity\ISeminarRepository.cs
+		Contracts\Repository\Entity\ISubjectRepository.cs = Contracts\Repository\Entity\ISubjectRepository.cs
+		Domain\Models\Lecture.cs = Domain\Models\Lecture.cs
+		Infrastructure\Configuration\LectureConfiguration.cs = Infrastructure\Configuration\LectureConfiguration.cs
+		Infrastructure\Repository\Entity\LectureRepository.cs = Infrastructure\Repository\Entity\LectureRepository.cs
+		Domain\Models\Seminar.cs = Domain\Models\Seminar.cs
+		Infrastructure\Configuration\SeminarConfiguration.cs = Infrastructure\Configuration\SeminarConfiguration.cs
+		Infrastructure\Repository\Entity\SeminarRepository.cs = Infrastructure\Repository\Entity\SeminarRepository.cs
+		Domain\Models\StudentEnrollment.cs = Domain\Models\StudentEnrollment.cs
+		Domain\Models\Subject.cs = Domain\Models\Subject.cs
+		Infrastructure\Configuration\SubjectConfiguration.cs = Infrastructure\Configuration\SubjectConfiguration.cs
+		Infrastructure\Repository\Entity\SubjectRepository.cs = Infrastructure\Repository\Entity\SubjectRepository.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

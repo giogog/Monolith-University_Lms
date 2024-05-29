@@ -29,4 +29,5 @@ public class Student
     public User User { get; set; }
     public int FacultyId { get; set; }
     public Faculty Faculty { get; set; }
+    public ICollection<StudentEnrollment> Enrollments { get; set; }
 }

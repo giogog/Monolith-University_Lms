@@ -6,4 +6,5 @@ public class Faculty
     public string Name { get; set; }
     public int Places { get; set; }
     public ICollection<Student> Students { get; set; }
+    public ICollection<Subject> Subjects { get; set; }
 }

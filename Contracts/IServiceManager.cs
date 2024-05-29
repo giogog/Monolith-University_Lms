@@ -8,5 +8,9 @@ public interface IServiceManager
     IThirdpartyService ThirdpartyService { get; }
     IUniversityService UniversityService { get; }
     IApplicantService ApplicantService { get; }
+    ILectureService LectureService { get; }
+    ISeminarService SeminarService { get; }
+    ISubjectService SubjectService { get; }
+    IGradeService GradeService { get; }
 
 }

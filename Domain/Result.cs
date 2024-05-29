@@ -24,6 +24,15 @@ public record Result<T>
 
         return new Result<T> { Data = data, IsSuccess = false, Message = "Save Failed" };
     }
+    public static Result<T> SuccesfullyUpdated<T>(int saved, T? data)
+    {
+        if (saved > 0)
+        {
+            return new Result<T> { Data = data, Message = "Updated Succesfully", IsSuccess = true };
+        }
+
+        return new Result<T> { Data = data, IsSuccess = true, Message = "No Changes" };
+    }
 
 
 }

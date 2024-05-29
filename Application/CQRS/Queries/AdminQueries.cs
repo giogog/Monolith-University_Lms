@@ -5,3 +5,4 @@ using MediatR;
 namespace Domain.CQRS.Queries;
 
 public record GetApplicantsQuery():IRequest<Result<IEnumerable<ApplicantDto>>>;
+public record GetSubjectbyNameQuery(string SubjectName):IRequest<Result<SubjectDtoGet>>;

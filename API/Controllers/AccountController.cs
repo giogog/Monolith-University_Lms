@@ -12,13 +12,27 @@ public class AccountController(IServiceManager serviceManager,IMediator mediator
 {
 
     [HttpPost("student-application")]
-    public async Task<ActionResult> Register(StudentApplicationCommand studentApplicationCommand)
+    public async Task<ActionResult> StudentApplication(StudentApplicationCommand studentApplicationCommand)
     {
         var registrationCheckUp = await mediator.Send(studentApplicationCommand);
         if (!registrationCheckUp.Succeeded)
             return BadRequest(registrationCheckUp.Errors);
 
         var sendmail =  await serviceManager.EmailService.SendConfirmationMail(Url, studentApplicationCommand.PersonalID);
+        if (!sendmail.Succeeded)
+            return BadRequest(sendmail.Errors);
+
+        return Ok("Registration successful. Please check your email to confirm your account.");
+    }
+
+    [HttpPost("teacher-registration")]
+    public async Task<ActionResult> TeacherRegistration(TeacherRegistrationCommand teacherApplicationCommand)
+    {
+        var registrationCheckUp = await mediator.Send(teacherApplicationCommand);
+        if (!registrationCheckUp.Succeeded)
+            return BadRequest(registrationCheckUp.Errors);
+
+        var sendmail = await serviceManager.EmailService.SendConfirmationMail(Url, teacherApplicationCommand.PersonalID);
         if (!sendmail.Succeeded)
             return BadRequest(sendmail.Errors);
 
