@@ -33,7 +33,7 @@ public class SeminarAddHandler : IRequestHandler<SeminarAddCommand, Result<int>>
         try
         {
             var saveResult = await _repositoryManager.SaveAsync();
-            return Result<int>.SuccesfullySaved(saveResult, saveResult);
+            return Result<int>.Success(saveResult);
         }
         catch (Exception ex)
         {

@@ -5,7 +5,7 @@ namespace Domain.Models;
 public class StudentEnrollment
 {
     public int Id { get; set; }
-    public int? LectureId { get; set; }
+    public int LectureId { get; set; }
     public Lecture? Lecture { get; set; }
     public int? SeminarId { get; set; }
     public Seminar? Seminar { get; set; }

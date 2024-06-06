@@ -26,7 +26,7 @@ public class SubjectService: ISubjectService
         {
             await _repositoryManager.SubjectRepository.AddSubject(subject);
             var saveResult = await _repositoryManager.SaveAsync();
-            return Result<int>.SuccesfullySaved(saveResult, saveResult);
+            return Result<int>.Success(saveResult);
         }
         catch (Exception ex)
         {

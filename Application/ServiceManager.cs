@@ -36,7 +36,7 @@ public class ServiceManager : IServiceManager
         _subjectService = new(() => new SubjectService(repositoryManager, mapper));
         _seminarService = new Lazy<ISeminarService>(() => new SeminarService(repositoryManager, mapper));
         _lectureService = new Lazy<ILectureService>(() => new LectureService(repositoryManager, mapper));
-        _gradeService = new(() => new GradeService());
+        _gradeService = new(() => new GradeService(repositoryManager));
     }
     public IAuthorizationService AuthorizationService => _authorizationService.Value;
     public IEmailService EmailService => _emailService.Value;

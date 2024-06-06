@@ -15,15 +15,7 @@ public record Result<T>
     }
     public static Result<T> Success(T? data, string massage = "") =>
         new Result<T> { Data = data, Message = massage, IsSuccess = true };
-    public static Result<T> SuccesfullySaved<T>(int saved, T? data)
-    {
-        if (saved > 0)
-        {
-            return new Result<T> { Data = data, Message = "Saved Succesfully", IsSuccess = true };
-        }
 
-        return new Result<T> { Data = data, IsSuccess = false, Message = "Save Failed" };
-    }
     public static Result<T> SuccesfullyUpdated<T>(int saved, T? data)
     {
         if (saved > 0)

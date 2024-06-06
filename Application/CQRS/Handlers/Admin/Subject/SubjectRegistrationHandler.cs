@@ -19,44 +19,58 @@ public class SubjectRegistrationHandler : IRequestHandler<SubjectRegistrationCom
     }
     public async Task<Result<int>> Handle(SubjectRegistrationCommand request, CancellationToken cancellationToken)
     {
+        //Set up Grade System
         var gradesSortResult = _serviceManager.GradeService.SetGradeSystem(request.GradeTypes);
         if (!gradesSortResult.IsSuccess)
             return Result<int>.Failed(gradesSortResult.Code, gradesSortResult.Message);
 
+        //Register Subject First
         var subjectDto = new SubjectDto(request.Name, request.CreditWeight, request.Semester, gradesSortResult.Data, request.FacultyName);
         
         var subjectRegisterResult = await _serviceManager.SubjectService.RegisterNewSubject(subjectDto); 
         if (!subjectRegisterResult.IsSuccess)
             return Result<int>.Failed(subjectRegisterResult.Code, subjectRegisterResult.Message);
 
+        //Register Seminars and Lectures seperately after subject registrations
+        var failedRegistrations = new List<string>();
         var subject = await _repositoryManager.SubjectRepository.GetByCondition(s=>s.Name==request.Name).FirstOrDefaultAsync();
-        foreach(var lecture in request.Lectures)
+        foreach (var lecture in request.Lectures)
         {
-            var LectureRegistrationResult = await _serviceManager.LectureService.RegisterLecture(subject.Id,lecture);
-            if (!LectureRegistrationResult.IsSuccess) 
+            var lectureRegistrationResult = await _serviceManager.LectureService.RegisterLecture(subject.Id, lecture);
+            if (!lectureRegistrationResult.IsSuccess)
             {
-                //LOG data
+                failedRegistrations.Add($"Lecture failed: {lectureRegistrationResult.Message}");
             }
-
         }
         foreach (var seminar in request.Seminars)
         {
-            var SeminarRegistrationResult = await _serviceManager.SeminarService.RegisterSeminar(subject.Id, seminar);
-            if (!SeminarRegistrationResult.IsSuccess)
+            var seminarRegistrationResult = await _serviceManager.SeminarService.RegisterSeminar(subject.Id, seminar);
+            if (!seminarRegistrationResult.IsSuccess)
             {
-                //LOG data
+                failedRegistrations.Add($"Seminar failed: {seminarRegistrationResult.Message}");
             }
-
         }
 
-        try
+
+        //Check if seminar or lecture registrations failed
+        if (failedRegistrations.Count < request.Lectures.Count + request.Seminars.Count)
         {
-            var saveResult = await _repositoryManager.SaveAsync();
-            return Result<int>.SuccesfullySaved(saveResult, saveResult);
+            try
+            {
+                var saveResult = await _repositoryManager.SaveAsync();
+                return Result<int>.Success(saveResult);
+            }
+            catch (Exception ex)
+            {
+
+                failedRegistrations.Add($"Saving error: {ex.Message}");
+                return Result<int>.Failed("SavingError", string.Join("\n", failedRegistrations));
+            }
         }
-        catch (Exception ex)
+        else
         {
-            return Result<int>.Failed("SavingError",ex.Message);
+            return Result<int>.Failed("RegistrationError", string.Join("\n", failedRegistrations));
         }
+
     }
 }

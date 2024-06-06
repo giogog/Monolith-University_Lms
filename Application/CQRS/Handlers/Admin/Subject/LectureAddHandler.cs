@@ -1,4 +1,5 @@
 ﻿using Application.CQRS.Commands;
+using AutoMapper;
 using Contracts;
 using Domain.Dtos;
 using Domain.Models;
@@ -10,11 +11,13 @@ public class LectureAddHandler : IRequestHandler<LectureAddCommand, Result<int>>
 {
     private readonly IRepositoryManager _repositoryManager;
     private readonly IServiceManager _serviceManager;
+    private readonly IMapper _mapper;
 
-    public LectureAddHandler(IRepositoryManager repositoryManager, IServiceManager serviceManager)
+    public LectureAddHandler(IRepositoryManager repositoryManager, IServiceManager serviceManager,IMapper mapper)
     {
         _repositoryManager = repositoryManager;
         _serviceManager = serviceManager;
+        _mapper = mapper;
     }
     public async Task<Result<int>> Handle(LectureAddCommand request, CancellationToken cancellationToken)
     {
@@ -33,7 +36,7 @@ public class LectureAddHandler : IRequestHandler<LectureAddCommand, Result<int>>
         try
         {
             var saveResult = await _repositoryManager.SaveAsync();
-            return Result<int>.SuccesfullySaved(saveResult, saveResult);
+            return Result<int>.Success(saveResult);
         }
         catch (Exception ex)
         {
