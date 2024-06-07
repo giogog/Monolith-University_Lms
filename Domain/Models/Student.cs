@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Enums;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -15,7 +16,7 @@ public class Student
 
     [Column(TypeName = "decimal(18, 2)")]
     [Range(0.01, 10000.00, ErrorMessage = "Price must be between $0.01 and $10,000.00")]
-    public decimal? SemesterPay { get; set; }
+    public decimal SemesterPay { get; set; }
     [Range(0, 70)]
     public int YearlyAvailableCredits { get; set; }
 
@@ -25,7 +26,7 @@ public class Student
     [Column(TypeName = "decimal(18, 2)")]
     [Range(0.01, 10000.00, ErrorMessage = "Price must be between $0.01 and $10,000.00")]
     public decimal Balance { get; set; } = 0;
-    public bool IsActive { get; set; } = false;
+    public AcademicStatus Status { get; set; }
     public User User { get; set; }
     public int FacultyId { get; set; }
     public Faculty Faculty { get; set; }

@@ -28,7 +28,8 @@ public class SeminarService : ISeminarService
             SubjectId = subjectId,
             Schedule = new ScheduleProperty { DayOfWeek = seminarDto.DayOfWeek, StartTime = seminarDto.StartTime, EndTime = seminarDto.EndTime },
             SeminarCapacity = seminarDto.SeminarCapacity,
-            TeacherId = teacher.Id
+            TeacherId = teacher.Id,
+            IsActive = true
         };
 
         await _repositoryManager.SeminarRepository.AddSeminar(seminar);

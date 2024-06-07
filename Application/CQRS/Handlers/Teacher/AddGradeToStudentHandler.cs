@@ -22,7 +22,10 @@ public class AddGradeToStudentHandler : IRequestHandler<AddGradeToStudentCommand
         if (enrollment == null)
             return Result<double[]>.Failed("NotFound", "Enrollment not found");
 
-        var gradeSystemResult = await _serviceManager.GradeService.GetGradeSystem(enrollment.Grades,request.subjectId);
+
+        var subject = await _repositoryManager.SubjectRepository.GetSubjectById(request.subjectId);
+
+        var gradeSystemResult =  _serviceManager.GradeService.GetGradeSystem(enrollment.Grades, subject.gradeTypes);
         if (!gradeSystemResult.IsSuccess)
             return Result<double[]>.Failed(gradeSystemResult.Code, gradeSystemResult.Message);
 

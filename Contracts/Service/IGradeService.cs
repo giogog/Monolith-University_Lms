@@ -6,6 +6,6 @@ namespace Contracts;
 public interface IGradeService
 {
     Result<string[]> SetGradeSystem(string[] grades);
-    Task<Result<Dictionary<string, double>>> GetGradeSystem(double[] grades, int subjectId);
+    Result<Dictionary<string, double>> GetGradeSystem(double[] grades, string[] gradeTypes);
     Result<double[]> AddGradeToStudent(GradeDto gradeDto);
 }

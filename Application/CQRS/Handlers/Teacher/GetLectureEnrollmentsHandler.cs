@@ -30,7 +30,7 @@ public class GetLectureEnrollmentsHandler : IRequestHandler<GetLectureEnrollment
     //    StudentEnrollmentDto[] enrollmentDtos = new StudentEnrollmentDto[enrollments.Count()];
     //    for (int i = 0; i < enrollments.Count(); i++)
     //    {
-    //        var gradeSystem = await _serviceManager.GradeService.GetGradeSystem(enrollments[i].Grades, request.subjectId);
+    //        var gradeSystem = await _serviceManager.GradeService.GetGradeSystem(enrollments[i].Grades, request.subject);
     //        if (gradeSystem == null)
     //            return Result<IEnumerable<StudentEnrollmentDto>>.Failed(gradeSystem.Code, gradeSystem.Message);
     //        enrollmentDtos[i] = new StudentEnrollmentDto(enrollments[i].Id, 
@@ -46,6 +46,7 @@ public class GetLectureEnrollmentsHandler : IRequestHandler<GetLectureEnrollment
 
     public async Task<Result<IEnumerable<StudentEnrollmentDto>>> Handle(GetLectureEnrollmentsQuery request, CancellationToken cancellationToken)
     {
+
         var enrollments = await _repositoryManager.EnrollmentRepository.GetByCondition(en => en.LectureId == request.lectureId)
             .Include(en => en.Student)
             .ThenInclude(s => s.User)
@@ -54,11 +55,11 @@ public class GetLectureEnrollmentsHandler : IRequestHandler<GetLectureEnrollment
         if (!enrollments.Any())
             return Result<IEnumerable<StudentEnrollmentDto>>.Failed("NotFound", "Enrollments not found");
 
-        int subjectId = _repositoryManager.LectureRepository.GetByCondition(l=>l.Id == request.lectureId).Select(l=>l.SubjectId).FirstOrDefault();
+        var subject = _repositoryManager.LectureRepository.GetByCondition(l=>l.Id == request.lectureId).Select(l=>l.Subject).FirstOrDefault();
 
         var tasks = enrollments.Select(async enrollment =>
         {
-            var gradeSystem = await _serviceManager.GradeService.GetGradeSystem(enrollment.Grades, subjectId);
+            var gradeSystem =  _serviceManager.GradeService.GetGradeSystem(enrollment.Grades, subject.gradeTypes);
             if (!gradeSystem.IsSuccess)
                 throw new InvalidOperationException("Grade system not found.");
 

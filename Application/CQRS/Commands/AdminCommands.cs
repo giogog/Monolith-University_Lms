@@ -24,5 +24,9 @@ public record SubjectActivationCommand(int subjectId, bool action):IRequest<Resu
 
 public record LectureAddCommand(int subjectId,int LectureCapacity, string TeacherPersonalId, DayOfWeek DayOfWeek, TimeSpan StartTime, TimeSpan EndTime) : IRequest<Result<int>>;
 public record SeminarAddCommand(int subjectId, int SeminarCapacity, string TeacherPersonalId, DayOfWeek DayOfWeek, TimeSpan StartTime, TimeSpan EndTime) : IRequest<Result<int>>;
-public record LectureDeleteCommand(int lectureId) : IRequest<Result<int>>;
-public record SeminarDeleteCommand(int seminarId) : IRequest<Result<int>>;
+public record LectureActivationCommand(int lectureId, bool action) : IRequest<Result<int>>;
+public record SeminarActivationCommand(int seminarId, bool action) : IRequest<Result<int>>;
+
+
+
+public record ChangeStudentStatus(string PersonalId, string Status):IRequest<Result<AcademicStatus>>;

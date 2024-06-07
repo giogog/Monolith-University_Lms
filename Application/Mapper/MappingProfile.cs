@@ -16,6 +16,19 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.DayOfWeek, opt => opt.MapFrom<DayOfWeekResolver>())
             .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime))
             .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime)).ReverseMap();
+
+
+        CreateMap<Student, StudentDataDto>()
+            .ForCtorParam("Name", opt => opt.MapFrom(src => src.User.Name))
+            .ForCtorParam("Surname", opt => opt.MapFrom(src => src.User.Surname))
+            .ForCtorParam("Email", opt => opt.MapFrom(src => src.User.Email))
+            .ForCtorParam("SemesterPay", opt => opt.MapFrom(src => src.SemesterPay))
+            .ForCtorParam("Status", opt => opt.MapFrom(src => src.Status)).ReverseMap();
+        CreateMap<Subject, SubjectByFacultyDto>()
+            .ForCtorParam("Name", opt => opt.MapFrom(src => src.Name))
+            .ForCtorParam("subjectId", opt => opt.MapFrom(src => src.Id));
+
+
     }
 
 }

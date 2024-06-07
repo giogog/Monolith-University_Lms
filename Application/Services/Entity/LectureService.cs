@@ -28,7 +28,8 @@ public class LectureService : ILectureService
             SubjectId = subjectId,
             Schedule = new ScheduleProperty { DayOfWeek = lectureDto.DayOfWeek, StartTime = lectureDto.StartTime, EndTime = lectureDto.EndTime },
             LectureCapacity = lectureDto.LectureCapacity,
-            TeacherId = teacher.Id
+            TeacherId = teacher.Id,
+            IsActive = true
         };
 
         await _repositoryManager.LectureRepository.AddLecture(lecture);

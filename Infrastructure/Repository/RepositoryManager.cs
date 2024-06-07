@@ -2,12 +2,14 @@
 using Domain.Models;
 using Infrastructure.DataConnection;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Infrastructure.Repository;
 
 public class RepositoryManager : IRepositoryManager
 {
     private readonly DomainDataContext _context;
+    private IDbContextTransaction _transaction;
     private readonly Lazy<IUserRepository> _userRepository;
     private readonly Lazy<IUniversityRepository> _universityRepository;
     private readonly Lazy<IFacultyRepository> _facultyRepository;
@@ -46,6 +48,9 @@ public class RepositoryManager : IRepositoryManager
     public IEnrollmentRepository EnrollmentRepository => _enrollmentRepository.Value;
     public ISubjectRepository SubjectRepository => _subjectRepository.Value;
     public IRoleRepository RoleRepository => _roleRepository.Value;
-
+    public async Task BeginTransactionAsync() => _transaction = await _context.Database.BeginTransactionAsync();
+    public async Task CommitTransactionAsync() => await _transaction.CommitAsync();
+    public async Task RollbackTransactionAsync() => await _transaction.RollbackAsync();
+    public void Dispose() => _transaction?.Dispose();
     public async Task<int> SaveAsync() => await _context.SaveChangesAsync();
 }

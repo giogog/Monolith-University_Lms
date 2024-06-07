@@ -28,10 +28,11 @@ public class GetSeminarEnrollmentsHandler : IRequestHandler<GetSeminarEnrollment
 
         if (!enrollments.Any())
             return Result<IEnumerable<StudentEnrollmentDto>>.Failed("NotFound", "Enrollments not found");
-        int subjectId = _repositoryManager.LectureRepository.GetByCondition(l => l.Id == request.seminarId).Select(l => l.SubjectId).FirstOrDefault();
+        var subject = _repositoryManager.LectureRepository.GetByCondition(l => l.Id == request.seminarId).Select(l => l.Subject).FirstOrDefault();
+
         var tasks = enrollments.Select(async enrollment =>
         {
-            var gradeSystem = await _serviceManager.GradeService.GetGradeSystem(enrollment.Grades, subjectId);
+            var gradeSystem =  _serviceManager.GradeService.GetGradeSystem(enrollment.Grades, subject.gradeTypes);
             if (!gradeSystem.IsSuccess)
                 throw new InvalidOperationException("Grade system not found.");
 

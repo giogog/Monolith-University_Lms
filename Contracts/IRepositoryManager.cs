@@ -2,7 +2,7 @@
 
 namespace Contracts;
 
-public interface IRepositoryManager
+public interface IRepositoryManager : IDisposable
 {
     IUserRepository UserRepository { get; }
     IUniversityRepository UniversityRepository { get; }
@@ -15,6 +15,8 @@ public interface IRepositoryManager
     ILectureRepository LectureRepository { get; }
     ISeminarRepository SeminarRepository { get; }
     IEnrollmentRepository EnrollmentRepository { get; }
-
+    Task BeginTransactionAsync();
+    Task CommitTransactionAsync();
+    Task RollbackTransactionAsync();
     Task<int> SaveAsync();
 }

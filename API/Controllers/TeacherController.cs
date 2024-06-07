@@ -45,7 +45,7 @@ public class TeacherController(IServiceManager serviceManager, IMediator mediato
     }
 
     [HttpGet("teacher-class-enrollments/{classType}/{classId}")]
-    public async Task<ActionResult<IEnumerable<StudentEnrollmentDto>>> GetTeacherClassEnrollments(string classType,int subjectId,int classId)
+    public async Task<ActionResult<IEnumerable<StudentEnrollmentDto>>> GetTeacherClassEnrollments(string classType,int classId)
     {
         
         if(classType.ToLower() == "lecture")

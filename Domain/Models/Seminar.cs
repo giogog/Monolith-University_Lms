@@ -11,8 +11,10 @@ public class Seminar
 
     [Range(0, 300)]
     public int SeminarCapacity { get; set; }
+    public int TakenPlaces => StudentEnrollments.Count();
     public ScheduleProperty Schedule { get; set; }
     public int TeacherId { get; set; }
     public Teacher? Teacher { get; set; }
+    public bool IsActive { get; set; }
     public ICollection<StudentEnrollment>? StudentEnrollments { get; set; }
 }

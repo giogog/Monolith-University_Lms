@@ -73,6 +73,9 @@ namespace API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<int>("LectureCapacity")
                         .HasColumnType("int");
 
@@ -155,6 +158,9 @@ namespace API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<int>("SeminarCapacity")
                         .HasColumnType("int");
 
@@ -190,11 +196,11 @@ namespace API.Migrations
                     b.Property<double>("Grant")
                         .HasColumnType("float");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<decimal?>("SemesterPay")
+                    b.Property<decimal>("SemesterPay")
                         .HasColumnType("decimal(18, 2)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<int>("TotalCredits")
                         .HasColumnType("int");
@@ -227,7 +233,7 @@ namespace API.Migrations
                     b.Property<bool>("IsPassed")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("LectureId")
+                    b.Property<int>("LectureId")
                         .HasColumnType("int");
 
                     b.Property<string>("Mark")

@@ -12,5 +12,6 @@ public interface IServiceManager
     ISeminarService SeminarService { get; }
     ISubjectService SubjectService { get; }
     IGradeService GradeService { get; }
+    IAcademicService AcademicService { get; }
 
 }

@@ -34,3 +34,13 @@ public record TeacherSubjectDto(int teacherId, int subjectid, TeacherScheduleDto
 public record StudentEnrollmentDto(int EnrollmentId,string ClassType, string StudentPersonalId, string StudentFullName,Dictionary<string,double> Grades);
 public record GradeDto(Dictionary<string, double> Grades, string GradeType, double Grade);
 
+//Student
+public record StudentDataDto(string Name, string Surname, string Email, decimal SemesterPay, AcademicStatus Status);
+public record StudentCardSubjectDto(string Name, Dictionary<string,double> Grades, char Mark);
+public record StudentCardDto(int FullCredits, double GPA, IEnumerable<StudentCardSubjectDto> Subjects);
+public record ClassDto(string ClassType, ScheduleTimesDto time);
+public record StudentScheduleDto(string SubjectName, IEnumerable<ClassDto> Classes);
+public record SubjectByFacultyDto(string Name,int subjectId);
+public record EnrollmentSubjectDto(string Name ,IEnumerable<EnrollmentLectureDto> Lectures, IEnumerable<EnrollmentSeminarDto>? Seminars);
+public record EnrollmentLectureDto(int lectureId,string TeacherFullName, ScheduleTimesDto ScheduleTimes, int Capacity,int TakenPlaces);
+public record EnrollmentSeminarDto(int seminarId, string TeacherFullName, ScheduleTimesDto ScheduleTimes, int Capacity, int TakenPlaces);

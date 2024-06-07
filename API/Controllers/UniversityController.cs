@@ -113,11 +113,21 @@ public class UniversityController(IServiceManager serviceManager,IMediator media
         return Ok("Seminar add successfully");
     }
 
-
-    [HttpDelete("lecture-delete/{lectureId}")]
-    public async Task<IActionResult> LectureDelete(int lectureId)
+    [HttpPut("lecture-activation/{lectureId}")]
+    public async Task<IActionResult> ActivateLecture(int lectureId)
     {
-        var result = await mediator.Send(new LectureDeleteCommand(lectureId));
+        var result = await mediator.Send(new LectureActivationCommand(lectureId,true));
+        if (!result.IsSuccess)
+            if (result.Code == "NotFound")
+                return NotFound(result.Message);
+            else
+                return BadRequest(result.Message);
+        return Ok("Lecture deleted successfully");
+    }
+    [HttpPut("lecture-deactivation/{lectureId}")]
+    public async Task<IActionResult> DeactivateLecture(int lectureId)
+    {
+        var result = await mediator.Send(new LectureActivationCommand(lectureId,false));
         if (!result.IsSuccess)
             if (result.Code == "NotFound")
                 return NotFound(result.Message);
@@ -127,10 +137,21 @@ public class UniversityController(IServiceManager serviceManager,IMediator media
     }
 
 
-    [HttpDelete("seminar-delete/{seminarId}")]
-    public async Task<IActionResult> SeminarDelete(int seminarId)
+    [HttpPut("seminar-activation/{seminarId}")]
+    public async Task<IActionResult> ActivateSeminar(int seminarId)
     {
-        var result = await mediator.Send(new SeminarDeleteCommand(seminarId));
+        var result = await mediator.Send(new SeminarActivationCommand(seminarId,true));
+        if (!result.IsSuccess)
+            if (result.Code == "NotFound")
+                return NotFound(result.Message);
+            else
+                return BadRequest(result.Message);
+        return Ok("Seminar Deleted successfully");
+    }
+    [HttpPut("seminar-deactivation/{seminarId}")]
+    public async Task<IActionResult> DeactivateSeminar(int seminarId)
+    {
+        var result = await mediator.Send(new SeminarActivationCommand(seminarId,false));
         if (!result.IsSuccess)
             if (result.Code == "NotFound")
                 return NotFound(result.Message);

@@ -22,7 +22,7 @@ public class LectureConfiguration : IEntityTypeConfiguration<Lecture>
         builder.HasMany(l =>l.StudentEnrollments)
             .WithOne(se=>se.Lecture)
             .HasForeignKey(se=>se.LectureId)
-        .IsRequired(false);
+            .IsRequired(false);
 
         builder.OwnsOne(lecture => lecture.Schedule, schedule =>
         {

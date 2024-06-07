@@ -26,19 +26,19 @@ public class GradeService:IGradeService
         return Result<string[]>.Success(grades.ChangeRepeatedItemsNames());
     }
 
-    public async Task<Result<Dictionary<string, double>>> GetGradeSystem(double[] grades,int subjectId)
+    public Result<Dictionary<string, double>> GetGradeSystem(double[] grades,string[] gradeTypes)
     {
-        var subject = await _repositoryManager.SubjectRepository.GetSubjectById(subjectId);
+        
 
-        if (subject == null)
+        if (gradeTypes.Count() == null)
             return Result<Dictionary<string, double>>.Failed("NotFound","Subject not found");
-        if(subject.gradeTypes.Count() != grades.Count())
-            return Result<Dictionary<string, double>>.Failed("NotMatch", $"Subject grade types and enrollment grades do not Match: {subject.gradeTypes.Count()} : {grades.Count()}");
+        if(gradeTypes.Count() != grades.Count())
+            return Result<Dictionary<string, double>>.Failed("NotMatch", $"Subject grade types and enrollment grades do not Match: {gradeTypes.Count()} : {grades.Count()}");
 
         Dictionary<string,double> GradeSystem = new Dictionary<string,double>();
-        for(int i = 0;i< subject.gradeTypes.Count();i++)
+        for(int i = 0;i< gradeTypes.Count();i++)
         {
-            GradeSystem.Add(subject.gradeTypes[i], grades[i]);
+            GradeSystem.Add(gradeTypes[i], grades[i]);
         }
 
         return Result<Dictionary<string, double>>.Success(GradeSystem);
@@ -51,6 +51,8 @@ public class GradeService:IGradeService
             return Result<double[]>.Failed("NotFound",$"Grade Type {gradeDto.GradeType} doesn't Exists");
 
         gradeDto.Grades[gradeDto.GradeType] = gradeDto.Grade;
+        if(gradeDto.Grades.Values.Sum() > 100)
+            return Result<double[]>.Failed("GradeMistake", $"Sum of the grade is greater than 100: {gradeDto.Grades.Values.Sum()}");
 
         double[] updatedGrades = new double[gradeDto.Grades.Count()];
 
@@ -60,6 +62,7 @@ public class GradeService:IGradeService
             updatedGrades[i] = grade.Value;
             i++;
         }
+        
 
         return Result<double[]>.Success(updatedGrades);
 

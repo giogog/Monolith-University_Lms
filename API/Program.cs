@@ -40,7 +40,8 @@ app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<ApplicantHub>("/applicantHub").RequireAuthorization();
-   
+    endpoints.MapHub<EnrollmentHub>("/enrollmentHub").RequireAuthorization();
+
 });
 
 app.MapControllers();

@@ -34,11 +34,11 @@ public class GetTeacherSubjectsHandler : IRequestHandler<GetTeacherSubjectsQuery
             .Select(t => new
             {
                 // Project only the necessary fields
-                Lectures = t.Lectures.Select(l => new TeacherSubjectDto(t.Id, l.SubjectId, new TeacherScheduleDto(
+                Lectures = t.Lectures.Where(l=>l.IsActive).Select(l => new TeacherSubjectDto(t.Id, l.SubjectId, new TeacherScheduleDto(
                     l.Subject.Name,
                     nameof(Lecture),
                     _mapper.Map<ScheduleTimesDto>(l.Schedule)), l.Id)),
-                Seminars = t.Seminars.Select(s => new TeacherSubjectDto(t.Id, s.SubjectId, new TeacherScheduleDto(
+                Seminars = t.Seminars.Where(l => l.IsActive).Select(s => new TeacherSubjectDto(t.Id, s.SubjectId, new TeacherScheduleDto(
                     s.Subject.Name,
                     nameof(Seminar),
                     _mapper.Map<ScheduleTimesDto>(s.Schedule)), s.Id))

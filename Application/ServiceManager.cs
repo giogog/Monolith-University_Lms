@@ -17,6 +17,7 @@ public class ServiceManager : IServiceManager
     private readonly Lazy<ISeminarService> _seminarService;
     private readonly Lazy<ILectureService> _lectureService;
     private readonly Lazy<IGradeService> _gradeService;
+    private readonly Lazy<IAcademicService> _academicService;
     public ServiceManager(
         IRepositoryManager repositoryManager,
         UserManager<User> userManager,
@@ -37,6 +38,7 @@ public class ServiceManager : IServiceManager
         _seminarService = new Lazy<ISeminarService>(() => new SeminarService(repositoryManager, mapper));
         _lectureService = new Lazy<ILectureService>(() => new LectureService(repositoryManager, mapper));
         _gradeService = new(() => new GradeService(repositoryManager));
+        _academicService = new Lazy<IAcademicService>(() => new AcademicService(repositoryManager));
     }
     public IAuthorizationService AuthorizationService => _authorizationService.Value;
     public IEmailService EmailService => _emailService.Value;
@@ -48,4 +50,5 @@ public class ServiceManager : IServiceManager
     public ILectureService LectureService => _lectureService.Value;
     public ISeminarService SeminarService => _seminarService.Value;
     public IGradeService GradeService => _gradeService.Value;
+    public IAcademicService AcademicService => _academicService.Value;
 }
