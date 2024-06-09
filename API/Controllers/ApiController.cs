@@ -10,13 +10,13 @@ namespace API.Controllers
     [ApiController]
     public class ApiController : ControllerBase
     {
-        //private readonly IServiceManager _serviceManager;
+        //private readonly IRepositoryManager _serviceManager;
         //private readonly IMediator _mediator;
         public ApiController()
         {
 
         }
-        public ApiController(IServiceManager serviceManager)
+        public ApiController(IRepositoryManager serviceManager)
         {
             //_serviceManager = serviceManager;
         }
@@ -31,6 +31,11 @@ namespace API.Controllers
         {
            // _mediator = mediator;
             //_serviceManager = serviceManager;
+        }
+
+        public ApiController(IServiceManager serviceManager)
+        {
+            //_mediator = mediator;
         }
 
     }

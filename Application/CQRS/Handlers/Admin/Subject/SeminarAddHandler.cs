@@ -11,7 +11,7 @@ public class SeminarAddHandler : IRequestHandler<SeminarAddCommand, Result<int>>
     private readonly IRepositoryManager _repositoryManager;
     private readonly IServiceManager _serviceManager;
 
-    public SeminarAddHandler(IRepositoryManager repositoryManager,IServiceManager serviceManager)
+    public SeminarAddHandler(IRepositoryManager repositoryManager, IServiceManager serviceManager)
     {
         _repositoryManager = repositoryManager;
         _serviceManager = serviceManager;

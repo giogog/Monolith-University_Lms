@@ -44,3 +44,5 @@ public record SubjectByFacultyDto(string Name,int subjectId);
 public record EnrollmentSubjectDto(string Name ,IEnumerable<EnrollmentLectureDto> Lectures, IEnumerable<EnrollmentSeminarDto>? Seminars);
 public record EnrollmentLectureDto(int lectureId,string TeacherFullName, ScheduleTimesDto ScheduleTimes, int Capacity,int TakenPlaces);
 public record EnrollmentSeminarDto(int seminarId, string TeacherFullName, ScheduleTimesDto ScheduleTimes, int Capacity, int TakenPlaces);
+public record StudentActiveEnrollmentsDto(string SubjectName, string TeacherFullName);
+public record CapacityDto(int classId, int Capacity);

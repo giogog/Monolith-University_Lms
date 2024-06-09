@@ -11,7 +11,7 @@ public class AddGradeToStudentHandler : IRequestHandler<AddGradeToStudentCommand
     private readonly IRepositoryManager _repositoryManager;
     private readonly IServiceManager _serviceManager;
 
-    public AddGradeToStudentHandler(IRepositoryManager repositoryManager,IServiceManager serviceManager)
+    public AddGradeToStudentHandler(IRepositoryManager repositoryManager, IServiceManager serviceManager)
     {
         _repositoryManager = repositoryManager;
         _serviceManager = serviceManager;

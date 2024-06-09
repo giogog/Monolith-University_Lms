@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Domain.Dtos;
+using Domain.Models;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 
 namespace Application.SignalR;
@@ -39,15 +41,15 @@ public class EnrollmentHub:Hub
         _logger.LogInformation($"Connection {Context.ConnectionId} removed from group Students.");
     }
 
-    public async Task NewLectureCapacity(int Capacity) // Ensure method name is "NewUser"
+    public async Task NewLectureCapacity(CapacityDto Capacity) // Ensure method name is "NewUser"
     {
-        await Clients.Group("Students").SendAsync("NewLectureCapacity", Capacity);
+        await Clients.OthersInGroup("Students").SendAsync("NewLectureCapacity", Capacity);
         _logger.LogInformation("New New Lecture Capacity sent to group Students.");
     }
 
-    public async Task NewSeminarCapacity(int Capacity) // Ensure method name is "NewUser"
+    public async Task NewSeminarCapacity(CapacityDto Capacity) // Ensure method name is "NewUser"
     {
-        await Clients.Group("Students").SendAsync("NewSeminarCapacity", Capacity);
+        await Clients.OthersInGroup("Students").SendAsync("NewSeminarCapacity", Capacity);
         _logger.LogInformation("New New Seminar Capacity sent to group Students.");
     }
 }

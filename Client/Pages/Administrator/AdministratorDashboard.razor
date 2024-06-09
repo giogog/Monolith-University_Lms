@@ -103,7 +103,7 @@ else
                     logging.AddConsole();
                 })
                 .Build();
-
+ 
             // Correctly handle the "NewUser" event
             hubConnection.On<ApplicantDto>("NewUser", async (newUser) =>
             {

@@ -9,7 +9,7 @@ public class ApproveStudentApplicationHandler : IRequestHandler<ApproveStudentAp
 {
     private readonly IRepositoryManager _repositoryManager;
 
-    public ApproveStudentApplicationHandler(IRepositoryManager repositoryManager,IServiceManager serviceManager)
+    public ApproveStudentApplicationHandler(IRepositoryManager repositoryManager)
     {
         _repositoryManager = repositoryManager;
     }

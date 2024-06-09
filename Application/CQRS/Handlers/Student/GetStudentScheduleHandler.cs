@@ -45,20 +45,21 @@ public class GetStudentScheduleHandler : IRequestHandler<GetStudentScheduleQuery
         var schedules = new List<StudentScheduleDto>();
 
 
-        int index = 0;
         foreach (var subject in activeSubjectsbyStudent)
         {
 
             var activities = new List<ClassDto>();
-            var LecturetimeDto = _mapper.Map<ScheduleTimesDto>(activeEnrollmentsByStudent[index].Lecture.Schedule);
+            var enrollment = activeEnrollmentsByStudent.Where(en => en.Lecture.SubjectId == subject.Id).FirstOrDefault();
+            if (enrollment == null)
+                continue;
+            var LecturetimeDto = _mapper.Map<ScheduleTimesDto>(enrollment.Lecture.Schedule);
             activities.Add(new ClassDto("Lecture", LecturetimeDto));
-            if (activeEnrollmentsByStudent[index].Seminar != null)
+            if (enrollment.Seminar != null)
             {
-                var SeminartimeDto = _mapper.Map<ScheduleTimesDto>(activeEnrollmentsByStudent[index].Seminar.Schedule);
+                var SeminartimeDto = _mapper.Map<ScheduleTimesDto>(enrollment.Seminar.Schedule);
                 activities.Add(new ClassDto("Seminar", SeminartimeDto));
             }
             schedules.Add(new StudentScheduleDto(subject.Name, activities));
-            index++;
         }
 
         return Result<IEnumerable<StudentScheduleDto>>.Success(schedules);

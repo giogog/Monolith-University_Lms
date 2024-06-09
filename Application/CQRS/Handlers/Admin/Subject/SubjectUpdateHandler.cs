@@ -11,7 +11,7 @@ public class SubjectUpdateHandler : IRequestHandler<SubjectUpdateCommand, Result
     private readonly IRepositoryManager _repositoryManager;
     private readonly IServiceManager _serviceManager;
 
-    public SubjectUpdateHandler(IRepositoryManager repositoryManager,IServiceManager serviceManager)
+    public SubjectUpdateHandler(IRepositoryManager repositoryManager, IServiceManager serviceManager)
     {
         _repositoryManager = repositoryManager;
         _serviceManager = serviceManager;

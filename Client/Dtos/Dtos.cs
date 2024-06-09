@@ -28,3 +28,17 @@ public class LoginDto
 //    public string Password { get; set; }
 //}
 public record LoginResponseDto(string PersonalId, string Token);
+
+public record StudentModel
+{
+    public string SelectedFaculty { get; set; }
+}
+
+public record EnrollmentSubjectDto(string Name, EnrollmentLectureDto[] Lectures, EnrollmentSeminarDto[]? Seminars);
+public record EnrollmentLectureDto(int lectureId, string TeacherFullName, ScheduleTimesDto ScheduleTimes, int Capacity, int TakenPlaces);
+public record EnrollmentSeminarDto(int seminarId, string TeacherFullName, ScheduleTimesDto ScheduleTimes, int Capacity, int TakenPlaces);
+public record ScheduleTimesDto(string DayOfWeek, TimeSpan StartTime, TimeSpan EndTime);
+public record SubjectByFacultyDto(string Name, int subjectId);
+public record SelectedSubjectDto(string SubjectName, string TeacherFullName);
+public record EnrollToSubjectCommand(int SubjectId, int LectureId, int SeminarId, string PersonalId);
+public record CapacityDto(int classId,int Capacity);

@@ -12,6 +12,7 @@ namespace API.Controllers;
 
 public class UniversityController(IServiceManager serviceManager,IMediator mediator):ApiController(serviceManager,mediator)
 { 
+
     [HttpGet("faculty")]
     public async Task<ActionResult<IEnumerable<string>>> GetFaculties()
     {
@@ -33,7 +34,7 @@ public class UniversityController(IServiceManager serviceManager,IMediator media
     }
 
 
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [HttpPost("approve-application/{personalId}")]
     public async Task<IActionResult> ApproveApplication(string personalId)
     {

@@ -30,7 +30,7 @@ public class GetLectureEnrollmentsHandler : IRequestHandler<GetLectureEnrollment
     //    StudentEnrollmentDto[] enrollmentDtos = new StudentEnrollmentDto[enrollments.Count()];
     //    for (int i = 0; i < enrollments.Count(); i++)
     //    {
-    //        var gradeSystem = await _serviceManager.GradeService.GetGradeSystem(enrollments[i].Grades, request.subject);
+    //        var gradeSystem = await _repositoryManager.GradeService.GetGradeSystem(enrollments[i].Grades, request.subject);
     //        if (gradeSystem == null)
     //            return Result<IEnumerable<StudentEnrollmentDto>>.Failed(gradeSystem.Code, gradeSystem.Message);
     //        enrollmentDtos[i] = new StudentEnrollmentDto(enrollments[i].Id, 
