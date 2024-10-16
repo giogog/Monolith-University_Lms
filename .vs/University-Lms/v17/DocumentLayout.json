@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD2DCC0F-3B13-4277-AC27-763240871CFF}|Infrastructure\\Infrastructure.csproj|c:\\users\\gio\\desktop\\programming\\portfolio\\gondoruni\\infrastructure\\domaindatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD2DCC0F-3B13-4277-AC27-763240871CFF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\domaindatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD2DCC0F-3B13-4277-AC27-763240871CFF}|Infrastructure\\Infrastructure.csproj|c:\\users\\gio\\desktop\\programming\\portfolio\\gondoruni\\infrastructure\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD2DCC0F-3B13-4277-AC27-763240871CFF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|c:\\users\\gio\\desktop\\programming\\portfolio\\gondoruni\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9EBAE4D7-74EF-4395-B9AF-0FDC834AA55A}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62861D28-D8E8-4EA6-A59A-77FA2A6D0D45}|Client\\Client.csproj|c:\\users\\gio\\desktop\\programming\\portfolio\\gondoruni\\client\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62861D28-D8E8-4EA6-A59A-77FA2A6D0D45}|Client\\Client.csproj|solutionrelative:client\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\Infrastructure\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\Infrastructure\\MongoDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\MongoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:14:20.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DomainDataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\Infrastructure\\DomainDataContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DomainDataContext.cs",
+              "ToolTip": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\Infrastructure\\DomainDataContext.cs",
+              "RelativeToolTip": "Infrastructure\\DomainDataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:14:19.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-16T18:14:06.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\Client\\appsettings.json",
+              "RelativeDocumentMoniker": "Client\\appsettings.json",
+              "ToolTip": "C:\\Users\\Gio\\Desktop\\Programming\\Portfolio\\GondorUni\\Client\\appsettings.json",
+              "RelativeToolTip": "Client\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-16T18:13:47.401Z",
+              "EditorCaption": ""
             }
           ]
         }
