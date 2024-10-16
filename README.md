@@ -1,0 +1,1 @@
+This is in progress project of univiersity Lms, its build with asp net core web api and entity framework, i am using clean architecture, CQRS with mediatr, Repository and Service managers(IUnitOfWork) and signalR.
